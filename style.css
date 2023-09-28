@@ -1,0 +1,148 @@
+:root{
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkblue: hsl(212, 21%, 14%);
+    --darkgrayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: var(--cream);
+}
+body{
+    width: 365px;
+    height: 96%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.principal{
+    margin: 20px 10px;
+    border-radius: 20px;
+    height: 600px;
+    width: 93%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.perfume{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+main, button, .desgloce{
+    margin: 15px;
+}
+h3{
+    color: var(--darkgrayishblue);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-weight: 700;
+    font-size: 2.1rem;
+    font-family: 'Fraunces';
+    height: 100px;
+    align-content: center;
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: var(--darkgrayishblue);
+    letter-spacing: 2px;
+    font-size: .8em;
+    margin: 0;
+    height: 90px;
+    line-height: 19px;
+    font-weight: 700;
+}
+.desgloce{
+    display: flex;
+    padding: 0;
+    transform: translateY(-20px);
+}
+.price{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--darkcyan);
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+.discount{
+    display: grid;
+    align-content: center;
+    margin-left: 15px;
+    text-decoration: line-through;
+    color: var(--darkgrayishblue);
+    
+}
+.elboton{
+    margin: 0 15px;
+    transform: translateY(-25px);
+    height: 100px;
+}
+.boton{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkcyan);
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 0;
+}
+.carrito{
+    margin-right: 10px;
+}
+button{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+@media screen and (min-width: 770px) {
+    .principal{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        height: 60%;
+    }
+    .section2, .section3{
+        width: 50%;
+    }
+    .perfume{
+        z-index: 1;
+        opacity: 0;
+    }
+    .section2 > div{
+        z-index: 3;
+        background-image: url(images/image-product-desktop.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .elboton{
+        height: 40px;
+    }
+    .section3, main{
+        display: grid;
+        gap: 10px;
+    }
+}
